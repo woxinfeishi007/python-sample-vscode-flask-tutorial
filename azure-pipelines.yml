@@ -40,6 +40,7 @@ steps:
       publishLocation: 'Container'
 
   - script: |
-      pip install pytest pytest-azurepipelines
+      pip install pytest pytest-azurepipelines flake8
+      flake8 .
       pytest
     displayName: 'pytest'
